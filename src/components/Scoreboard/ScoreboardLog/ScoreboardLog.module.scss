@@ -1,0 +1,82 @@
+@import 'src/assets';
+
+.history-log {
+  	display: flex;
+	width: 300px;
+	max-width: calc(100% - 10px);
+	height: 50px;
+	background-color: #f03100;
+	margin: 5px auto;
+	padding: 5px;
+	border-radius: 10px;
+	vertical-align: middle;
+	transition: $transition;
+
+	&:hover {
+		box-shadow: #6d0000 0 1px 9px;
+		transform: scale(1.01);
+	}
+
+	@media (max-width: 430px) {
+		height: 130px;
+	}
+}
+
+.log-container {
+	display: flex;
+	margin: 0 auto;
+	width: 100%;
+	vertical-align: center;
+	justify-content: space-between;
+
+	@media (max-width: 430px) {
+		flex-direction: column;
+	}
+
+	div {
+		font-size: 20px;
+		color: #ffba08;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+		p {
+			font-family: $bold-font;
+		}
+	}
+}
+
+.round {
+	display: flex;
+	background-color: #d00000;
+	padding: 7px;
+	border-radius: 5px;
+	width: 96px;
+}
+
+.opponents {
+	display: flex;
+	color: #6e0000;
+}
+
+.result {
+	display: flex;
+	background-color: #d00000;
+	padding: 7px;
+	border-radius: 5px;
+	width: 79px;
+}
+
+.won {
+	background-color: #2f9300;
+	color: #014701 !important;
+}
+
+.lost {
+	background-color: #480000;
+	color: red !important;
+}
+
+.draw {
+	background-color: #8d5a5f;
+	color: #491010 !important;
+}

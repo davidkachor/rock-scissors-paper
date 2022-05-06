@@ -1,0 +1,47 @@
+@import 'src/assets';
+
+.scoreboard {
+	display: flex;
+	flex-direction: column;
+	background-color: #d00000;
+	width: 450px;
+	max-width: calc(100% - 60px);
+	margin: 0 auto;
+	padding: 30px;
+	text-align: center;
+	border-radius: 30px;
+	box-shadow: $box-shadow2;
+
+	@media (max-width: 300px) {
+		padding: 20px;
+		max-width: calc(100% - 40px);
+	}
+}
+.scoreboard-title {
+	font-family: $bold-font;
+	color: #ffba08;
+	font-size: 40px;
+
+	@media (max-width: 430px) {
+		font-size: 30px;
+	}
+}
+.history-list {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.continue-btn {
+	width: 200px;
+	margin: 0 auto;
+	background-color: #6a040f;
+	color: #ffba08;
+	transition: $transition;
+
+	&:hover {
+		box-shadow: #810000 0 1px 15px;
+		transform: scale(1.04);
+		background-color: #80000d;
+	}
+}
