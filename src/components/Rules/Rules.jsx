@@ -4,7 +4,7 @@ import Button from "../UI/Button/Button";
 import {useDispatch} from "react-redux";
 import {setPage} from "../../store/uiSlice";
 
-function Rules(props) {
+function Rules() {
     const dispatch = useDispatch()
 
     const clickHandler = () => {
@@ -23,7 +23,7 @@ function Rules(props) {
                     <li>And we play up to three wins!</li>
                 </ul>
             </div>
-            <Button onClisk={clickHandler} className={s['rules-card__btn']}>Start!</Button>
+            <Button onClick={clickHandler} className={s['rules-card__btn']}>Start!</Button>
         </div>
     );
 }

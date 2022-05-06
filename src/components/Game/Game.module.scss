@@ -1,0 +1,38 @@
+@import "src/assets";
+.game {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-family: $bold-font;
+  font-size: 75px;
+  color: #ffba08;
+  text-align: center;
+  text-shadow: $text-shadow;
+
+  @media (max-width: 430px) {
+    font-size: 50px;
+  }
+}
+.reset-btn {
+  margin: 0 auto 20px;
+  background-color: #d00000;
+  color: #ffba08;
+  box-shadow: $box-shadow1;
+  transition: $transition;
+
+  &:hover {
+    background-color: #ec0000;
+    transform: scale(1.04);
+  }
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+
+  @media (max-width: 760px) {
+    flex-direction: column;
+  }
+}
