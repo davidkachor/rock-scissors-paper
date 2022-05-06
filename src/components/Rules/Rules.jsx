@@ -1,8 +1,16 @@
 import React from 'react';
 import s from './Rules.module.scss'
 import Button from "../UI/Button/Button";
+import {useDispatch} from "react-redux";
+import {setPage} from "../../store/uiSlice";
 
 function Rules(props) {
+    const dispatch = useDispatch()
+
+    const clickHandler = () => {
+        dispatch(setPage('GAME_STARTED'))
+    }
+
     return (
         <div className={s['rules-card']}>
             <div className={s['rules-card__text']}>
@@ -15,7 +23,7 @@ function Rules(props) {
                     <li>And we play up to three wins!</li>
                 </ul>
             </div>
-            <Button className={s['rules-card__btn']}>Start!</Button>
+            <Button onClisk={clickHandler} className={s['rules-card__btn']}>Start!</Button>
         </div>
     );
 }
