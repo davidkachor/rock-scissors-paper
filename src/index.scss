@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap");
+@import 'assets.scss';
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: $light-font;
+    box-shadow: none;
+}
+
+body {
+    background-color: #6a040f;
+}
