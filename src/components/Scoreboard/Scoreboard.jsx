@@ -1,16 +1,32 @@
-import React from 'react'
-import s from './Scoreboard.module.scss'
+import React, { useEffect } from 'react'
+
 import { useDispatch, useSelector } from 'react-redux'
+import { setPage } from '../../store/uiSlice'
+import { setGameResult } from '../../store/gameSlice'
+
+import s from './Scoreboard.module.scss'
+
 import ScoreboardLog from './ScoreboardLog/ScoreboardLog'
 import Button from '../UI/Button/Button'
-import { setPage } from '../../store/uiSlice'
 
 function Scoreboard() {
 	const dispatch = useDispatch()
-	const history = useSelector(state => state.game.history)
+	const { history, gameResult } = useSelector(state => state.game)
+
+	useEffect(() => {
+		if (history.filter(e => e.result === 'lost').length === 3) {
+			dispatch(setGameResult('lost'))
+		} else if (history.filter(e => e.result === 'won').length === 3) {
+			dispatch(setGameResult('won'))
+		}
+	}, [dispatch, history])
 
 	const clickHandler = () => {
-		dispatch(setPage('GAME_STARTED'))
+		if (gameResult === '') {
+			dispatch(setPage('GAME_STARTED'))
+		} else {
+			dispatch(setPage('GAME_RESULT'))
+		}
 	}
 
 	return (

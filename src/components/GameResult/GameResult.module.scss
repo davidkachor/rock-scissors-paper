@@ -1,0 +1,105 @@
+@import 'src/assets';
+
+.result-of-the-game {
+	display: flex;
+	flex-direction: column;
+}
+
+.greeting {
+	color: #ffba08;
+	font-size: 50px;
+	text-align: center;
+
+	p {
+		font-family: $bold-font;
+	}
+
+	@media (max-width: 500px) {
+		font-size: 40px;
+	}
+
+	@media (max-width: 391px) {
+		font-size: 30px;
+	}
+
+	@media (max-width: 291px) {
+		font-size: 22px;
+	}
+}
+
+.game-result {
+	display: flex;
+	align-items: center;
+	font-family: $bold-font;
+	font-size: 50px;
+	text-align: center;
+	height: 150px;
+	width: 300px;
+	margin: 30px auto 30px;
+
+	p {
+		font-family: inherit;
+		padding: 20px;
+		border-radius: 20px;
+		box-shadow: $box-shadow1;
+		margin: 0 auto;
+
+		@media (max-width: 500px) {
+			font-size: 40px;
+		}
+
+		@media (max-width: 391px) {
+			font-size: 30px;
+		}
+
+		@media (max-width: 291px) {
+			font-size: 22px;
+		}
+	}
+
+	@media (max-width: 391px) {
+		height: 100px;
+	}
+
+	@media (max-width: 291px) {
+		font-size: 22px;
+		height: 80px;
+	}
+}
+
+.won {
+	background-color: #2f9300;
+	color: #014701;
+}
+
+.lost {
+	background-color: #d00000;
+	color: #6e0000;
+}
+
+.play-again-btn {
+	width: 270px;
+	height: 160px;
+	margin: 0 auto;
+	background-color: #d00000;
+	color: #ffba08;
+	font-size: 50px;
+	box-shadow: $box-shadow1;
+	transition: $transition;
+
+	&:hover {
+		background-color: #ec0000;
+		transform: scale(1.04);
+	}
+
+	@media (max-width: 500px) {
+		font-size: 40px;
+	}
+
+	@media (max-width: 391px) {
+		font-size: 25px;
+		padding: 20px;
+		width: 150px;
+		height: 100px;
+	}
+}

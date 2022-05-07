@@ -1,10 +1,13 @@
 .container {
-  margin: 50px auto;
-  width: 1200px;
-  max-width: calc(100% - 50px);
-  height: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: calc(100% - 50px);
+	height: 100%;
 
-  @media (max-width: 300px) {
-    margin: 20px auto;
-  }
+	@media (max-width: 300px) {
+		margin: 20px auto;
+	}
 }

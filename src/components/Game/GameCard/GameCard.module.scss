@@ -9,6 +9,7 @@
   box-shadow: $box-shadow1;
   transition: $transition;
   cursor: pointer;
+  margin: 0 10px;
 
   &:hover {
     background-color: #ec0000;
@@ -28,13 +29,9 @@
   }
 
   @media (max-width: 760px) {
-    width: 400px;
-    height: 400px;
-    margin: 10px auto;
-  }
-  @media (max-width: 430px) {
     width: 200px;
     height: 200px;
+    margin: 10px auto;
   }
 
 }

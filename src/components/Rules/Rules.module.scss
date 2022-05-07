@@ -57,7 +57,7 @@
     transition: $transition;
 
     &:hover {
-      box-shadow: #810000 0px 1px 15px;
+      box-shadow: #810000 0 1px 15px;
       transform: scale(1.04);
       background-color: #80000d;
     }

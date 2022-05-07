@@ -27,9 +27,16 @@
 	}
 }
 .history-list {
+	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
-	padding: 10px;
+	margin: 10px 0;
+	height: 300px;
+	overflow-y: scroll;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 .continue-btn {

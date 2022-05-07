@@ -1,13 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
 @import 'assets.scss';
 * {
-    margin: 0;
-    padding: 0;
-    border: none;
-    font-family: $light-font;
-    box-shadow: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-family: $light-font;
+	box-shadow: none;
+}
+
+html {
+	height: 100%;
 }
 
 body {
-    background-color: #6a040f;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	background-color: #6a040f;
+}
+
+#root {
+	width: 100%;
 }

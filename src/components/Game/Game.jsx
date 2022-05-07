@@ -1,11 +1,20 @@
 import React, { useRef } from 'react'
-import s from './Game.module.scss'
-import GameCard from './GameCard/GameCard'
-import Button from '../UI/Button/Button'
+
 import { useDispatch, useSelector } from 'react-redux'
 import { setPage } from '../../store/uiSlice'
+import {
+	addHistory,
+	clearHistory,
+	setRound,
+	resetRound,
+} from '../../store/gameSlice'
+
+import s from './Game.module.scss'
+
+import GameCard from './GameCard/GameCard'
+import Button from '../UI/Button/Button'
+
 import randomChoice from '../../game-helpers/enemy-choice'
-import {addHistory, setRound} from '../../store/gameSlice'
 import didYouWonRound from '../../game-helpers/did-you-won-round'
 
 function Game() {
@@ -14,8 +23,7 @@ function Game() {
 	const enemyChoice = useRef(randomChoice())
 
 	const clickHandler = type => {
-		const choiceText =
-			type === 'rock' ? '✊' : type === 'paper' ? '✋' : '✌'
+		const choiceText = type === 'rock' ? '✊' : type === 'paper' ? '✋' : '✌'
 		return () => {
 			dispatch(
 				addHistory({
@@ -30,6 +38,12 @@ function Game() {
 		}
 	}
 
+	const resetHandler = () => {
+		dispatch(clearHistory())
+		dispatch(resetRound())
+		dispatch(setPage('RULES'))
+	}
+
 	return (
 		<div className={s.game}>
 			<p className={s.title}>Choose!</p>
@@ -38,7 +52,9 @@ function Game() {
 				<GameCard onClick={clickHandler('paper')}>&#x270B;</GameCard>
 				<GameCard onClick={clickHandler('scissors')}>&#x270C;</GameCard>
 			</div>
-			<Button className={s['reset-btn']}>Reset</Button>
+			<Button onClick={resetHandler} className={s['reset-btn']}>
+				Reset
+			</Button>
 		</div>
 	)
 }

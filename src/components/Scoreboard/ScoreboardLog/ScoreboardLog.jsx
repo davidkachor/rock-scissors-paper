@@ -1,4 +1,5 @@
 import React from 'react'
+
 import s from './ScoreboardLog.module.scss'
 
 function ScoreboardLog(props) {
@@ -27,9 +28,7 @@ function ScoreboardLog(props) {
 					<p>Round {props.round}</p>
 				</div>
 				<div className={s.opponents}>
-					<p>
-						{`${props.playerChoice} vs ${props.enemyChoice}`}
-					</p>
+					<p>{`${props.playerChoice} vs ${props.enemyChoice}`}</p>
 				</div>
 				<div className={resultClassName}>
 					<p>{result}</p>

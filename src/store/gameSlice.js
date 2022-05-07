@@ -20,9 +20,13 @@ const gameSlice = createSlice({
 		setRound(state) {
 			state.round++
 		},
+		resetRound(state) {
+			state.round = 1
+		},
 	},
 })
 
-export const { addHistory, clearHistory, setGameResult, setRound } = gameSlice.actions
+export const { addHistory, clearHistory, setGameResult, setRound, resetRound } =
+	gameSlice.actions
 
 export default gameSlice
