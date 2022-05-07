@@ -4,15 +4,12 @@ const gameSlice = createSlice({
 	name: 'game',
 	initialState: {
 		gameResult: '',
-		history: [
-		//	{ round: 1, playerChoice: '✋', enemyChoice: '✋', result: 'draw' },
-		//	{ round: 2, playerChoice: '✋', enemyChoice: '✋', result: 'won' },
-        //    {round: 3, playerChoice: '✋', enemyChoice: '✋', result: 'lost'}
-		],
+		history: [],
+		round: 1,
 	},
 	reducers: {
 		addHistory(state, action) {
-			state.history.unshift(action.payload)
+			state.history.push(action.payload)
 		},
 		clearHistory(state) {
 			state.history = []
@@ -20,9 +17,12 @@ const gameSlice = createSlice({
 		setGameResult(state, action) {
 			state.gameResult = action.payload
 		},
+		setRound(state) {
+			state.round++
+		},
 	},
 })
 
-export const { addHistory, clearHistory, setGameResult } = gameSlice.actions
+export const { addHistory, clearHistory, setGameResult, setRound } = gameSlice.actions
 
 export default gameSlice

@@ -28,7 +28,7 @@ function ScoreboardLog(props) {
 				</div>
 				<div className={s.opponents}>
 					<p>
-						{props.playerChoice} vs {props.enemyChoice}
+						{`${props.playerChoice} vs ${props.enemyChoice}`}
 					</p>
 				</div>
 				<div className={resultClassName}>
