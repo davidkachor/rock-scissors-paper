@@ -13,10 +13,6 @@
 	transition: $transition;
 	cursor: default;
 
-	&:hover {
-		box-shadow: #6d0000 0 1px 9px;
-		transform: scale(1.01);
-	}
 
 	@media (max-width: 430px) {
 		height: 130px;

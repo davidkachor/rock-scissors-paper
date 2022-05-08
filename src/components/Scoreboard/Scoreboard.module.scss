@@ -29,8 +29,10 @@
 .history-list {
 	border-radius: 10px;
 	display: flex;
+	width: 300px;
+	max-width: calc(100% - 10px);
 	flex-direction: column;
-	margin: 10px 0;
+	margin: 10px auto;
 	height: 300px;
 	overflow-y: scroll;
 
